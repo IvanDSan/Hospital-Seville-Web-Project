@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("/images/sevilla.jpg");
+  background-size: cover;      
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  background-attachment: fixed; 
+}
+
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+header {
+  
+  height: 400px;
+  background-color:#a44228;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 100vw;
+}
+
+nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header .textos-header {
+  display: flex;
+  height: 230px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textos-header h1 {
+  font-size: 50px;
+  color: #fff;
+}
+
+.textos-header h2 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px;
+  overflow: hidden;
+}
+
+.cards .card {
+  background: #D79742;
+  display: flex;
+  flex-direction: column; 
+  width: 250px; 
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 15px;
+ 
+}
+
+.cards .card img {
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  padding: 2px;
+}
+.cards .card .contenido-texto-card {
+  width: 60%;
+  color: #fff;
+}
+
+.cards .card .contenido-texto-card p {
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.btn-profile {
+  padding: 10px 20px;
+  background-color: #c4ae50;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.btn-profile a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-profile:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background: #a44228;
+  padding: 60px 0 20px 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-footer {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+  text-align: center;
+}
+
+.content-foo h4 {
+  color: #fff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.content-foo p {
+  color: #ccc;
+}
+
+.titulo-final {
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 0 0;
+  color: #fffefe;
+}
+

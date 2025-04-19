@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir Médico</title>
+    <link rel="stylesheet" href="/stylesheets/formnewmedico.css" />
+</head>
+<body>
+    <%- include('modules/navbar.ejs') %>
+    <div class="form">
+        <h2>Añadir Médico al Hospital</h2>
+        <form action="/medicos/newmedico/<%=hospital_id%>" enctype="multipart/form-data" method="POST">
+        <label for="name_medic">Nombre:</label>
+        <input type="text" name="name_medic" required><br>
+
+        <label for="specialty">Especialidad:</label>
+        <input type="text" name="specialty" required><br>
+
+        <label for="degree">Título Universitario:</label>
+        <input type="text" name="degree" required><br>
+
+        <label for="description">Descripción:</label>
+        <textarea name="description"></textarea><br>
+
+        <label for="photo">Foto:</label>
+        <input type="file" name="imagen"><br>
+
+        <button type="submit">Añadir Médico</button>
+    </div>
+
+    
+
+    </form>
+    <%- include('modules/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/profilestyle.css">
+</head>
+<body>
+    <%- include('modules/navbar.ejs') %>
+    <div class="container">
+        
+            <div class="hospital-card">
+                <div class="hospital-card-body">
+                
+                    <img src="/images/<%= result.photo %>" class="hospital-image" alt="foto hospital">
+                    <h2><%= result.name_hospital %></h2>
+                    <p><strong>descripcion:</strong> <%= result.description %></p>
+                    <p><strong>E-mail:</strong> <%= result.e_mail %></p>
+                    <p><strong>Ubicación:</strong> <%= result.adress %></p>
+                    <p><strong>Ciudad:</strong> <%= result.city %></p>
+                    <p><strong>Teléfono:</strong> <%= result.phone_number %></p>
+                    
+                    <button class="add-medic-btn"><a href="/medicos/newmedico/<%=result.hospital_id%>">Añadir Médico</a></button>
+                </div>
+            </div>
+        
+    </div>
+            <main>
+                <section class="hospitales contenedor">
+                    <h2 class="titulo">Nuestros Profesionales</h2>
+                    <div class="cardsmed">
+                        <% medicos.forEach((elem) => { %>
+                        <div class="cardmed">
+                            
+                            <img src="/images/<%= elem.photo %>" alt="">
+                            <div class="contenido-texto-card">
+                                <div>Nombre: <%= elem.name_medic %></div>
+                                <div>Especialidad: <%= elem.specialty %></div>
+                                <div>Titulo: <%= elem.degree %></div>                               
+                                <div>Descripcion: <%= elem.description %></div>
+                                
+                                <div class="mt-3">
+                                    <button class="btn btn-primary"onclick="window.location.href='/medicos/editmedico/<%=elem.medicos_id%>/<%=result.hospital_id%>'">Editar</button>
+                                    <button 
+                                    class="btn btn-danger"
+                                    onclick="window.location.href='/medicos/delmedic/<%=elem.medicos_id%>/<%=result.hospital_id %>'"
+                                  >Eliminar</button>
+                                  
+                                  </div>
+                            </div>                     
+                        </div>
+                        <% }); %> 
+                    </div>
+                </section>
+            </main>
+                 
+    </div>
+    <%- include('modules/footer.ejs') %>
+</body>
+</html>
+
+   
+
+
+
+   

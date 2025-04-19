@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/formedit.css" />
+    <title>Editar Médico</title>
+  </head>
+  <body>
+    <%- include('modules/navbar.ejs') %>
+    <div class="form-container">
+      <h2>Formulario de Médico</h2>
+      <form
+        action="/medicos/editmedico/<%= data.medicos_id %>/<%= data.hospital_id %>"
+        method="POST"
+      >
+        <label for="nombre">Nombre del Médico:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="name_medic"
+          value="<%= data.name_medic %>"
+          required
+        /><br /><br />
+
+        <label for="especialidad">Especialidad:</label>
+        <input
+          type="text"
+          id="especialidad"
+          name="specialty"
+          value="<%= data.specialty %>"
+          required
+        /><br /><br />
+
+        <label for="titulo">Título:</label>
+        <input
+          type="text"
+          id="titulo"
+          name="degree"
+          value="<%= data.degree %>"
+          required
+        /><br /><br />
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="description" required>
+<%= data.description %></textarea
+        ><br /><br />
+
+        <button type="submit">Editar</button>
+      </form>
+    </div>
+
+    <%- include('modules/footer.ejs') %>
+  </body>
+</html>
